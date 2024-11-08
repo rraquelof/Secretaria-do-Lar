@@ -12,7 +12,7 @@
     </header>
 
     <main id="taskLists">
-        <p id="noListsMessage" class="no-lists hidden">Não há listas... 📝</p>
+        <p id="noListsMessage" class="no-lists hidden">Não há listas.... 📝</p>
     </main>
 
     <button id="addListButton" class="add-button">+</button>
@@ -20,15 +20,12 @@
     <!-- Modal para adicionar nova lista e tarefas -->
     <div id="newListModal" class="modal hidden">
         <div class="modal-content">
-            <h2>Nova Lista</h2>
-            <label for="listTitle">Nome da Lista</label>
-            <input type="text" id="listTitle" maxlength="50" required>
+            <input type="text" placeholder="Título da lista..." id="listTitle" maxlength="50" required>
             
-            <h3>Tarefas</h3>
             <div id="tasksContainer"></div>
             
             <button id="addTaskButton" class="add-task">Adicionar Tarefa</button>
-            <button id="saveListButton">Salvar Lista</button>
+            <button id="saveListButton" class="add-task">Salvar Lista</button>
             <button id="closeModalButton" class="close-button">Fechar</button>
         </div>
     </div>
