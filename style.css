@@ -35,6 +35,21 @@ main {
     margin-top: 30px;
 }
 
+#listTitle {
+    border: transparent;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#listTitle:focus {
+    outline: none;
+}
+
+#listTitle:focus::placeholder {
+    color: transparent;
+}
+
 .list-preview {
     display: flex;
     flex-direction: column;
@@ -101,18 +116,36 @@ main {
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
     color: #fff;
+    transition: 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #7a7a7a;
+    transform: scale(1.1);
+    box-shadow: 2px 5px 0px black;
 }
 
 .add-task {
     background-color: #d979a0;
     border: none;
     color: #fff;
-    padding: 5px 10px;
-    border-radius: 8px;
+    padding: 10px 10px;
+    border-radius: 80px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+
+.add-task:hover {
+    background-color: #ad3464;
+    transform: scale(1.1);
+    box-shadow: 2px 5px 0px black;
 }
 
 .task-item {
@@ -120,9 +153,40 @@ main {
     flex-direction: column;
     background-color: #f9f4f4;
     border: 1px solid #ddd;
-    padding: 10px;
     border-radius: 8px;
     margin-top: 10px;
+}
+
+.delete-task-button{
+    background-color: #d4004a;
+    border: 1px solid #8a0030;
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.delete-task-button:hover {
+    background-color: #9e0239;
+    transform: scale(0.99);
+}
+
+
+.description-button{
+    background-color: #F39D9D;
+    border: 1px solid #b97777;
+    color: #fff;
+    border-radius: 0px 8px 8px 0px;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.description-button:hover {
+    background-color: #b97777;
+    transform: scale(0.97);
 }
 
 .task-title {
@@ -133,7 +197,32 @@ main {
 
 .task-title input[type="text"] {
     flex: 1;
-    margin-right: 10px;
+    margin: 0px 20px 0px 0px;
+    border: transparent;
+    background-color: #f9f4f4;
+}
+
+.task-title input[type="text"]:focus{
+    outline: none;
+}
+
+.task-title input[type="text"]:focus::placeholder{
+color: transparent;;
+}
+
+.task-title button {
+    background-color: #F39D9D;
+    border: 1px solid #b97777;
+    color: #fff;
+    border-radius: 0px 8px 8px 0px;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.task-title button:hover {
+    background-color: #b97777;
+    transform: scale(0.97);
 }
 
 .description-dropdown {
