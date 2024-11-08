@@ -86,8 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const taskTitleText = document.createElement("span");
             taskTitleText.textContent = task.title;
 
+            //botão para adicionar uma descrição
             const descriptionToggle = document.createElement("button");
             descriptionToggle.textContent = "Descrição";
+            descriptionToggle.classList.add("description-button");
             descriptionToggle.addEventListener("click", () => {
                 descriptionContent.classList.toggle("hidden");
             });
