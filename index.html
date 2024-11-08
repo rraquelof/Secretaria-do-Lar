@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretária do Lar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Secretária do Lar</h1>
+    </header>
+
+    <main id="taskLists">
+        <p id="noListsMessage" class="no-lists hidden">Não há listas... 📝</p>
+    </main>
+
+    <button id="addListButton" class="add-button">+</button>
+
+    <!-- Modal para adicionar nova lista e tarefas -->
+    <div id="newListModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Nova Lista</h2>
+            <label for="listTitle">Nome da Lista</label>
+            <input type="text" id="listTitle" maxlength="50" required>
+            
+            <h3>Tarefas</h3>
+            <div id="tasksContainer"></div>
+            
+            <button id="addTaskButton" class="add-task">Adicionar Tarefa</button>
+            <button id="saveListButton">Salvar Lista</button>
+            <button id="closeModalButton" class="close-button">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal para visualizar a lista completa -->
+    <div id="viewListModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="viewListTitle"></h2>
+            <div id="viewTasksContainer"></div>
+            <button id="closeViewListModalButton" class="close-button">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Área de Lixeira -->
+    <div id="trashArea" class="trash hidden">🗑️ Arraste aqui para excluir</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

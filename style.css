@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e9e5;
+    color: #4b2e2e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #F39D9D;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.no-lists {
+    font-size: 1.2em;
+    color: #a38686;
+    margin-top: 30px;
+}
+
+.list-preview {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+}
+
+.add-button {
+    position: fixed;
+    bottom: 15%;
+    right: 15%;
+    background-color: #685858;
+    ;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #d4004a;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.close-button {
+    background-color: #c4b3b3;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.add-task {
+    background-color: #d979a0;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.task-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.task-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-title input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.description-dropdown {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #6e4e4e;
+}
+
+/* Estilo para a área de lixeira */
+.trash {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 100px;
+    transition: opacity 0.3s ease;
+    display: block;
+    opacity: 0;
+    z-index: 1000;
+}
+
+.trash.visible {
+    opacity: 1;
+}
